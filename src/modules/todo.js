@@ -1,12 +1,18 @@
-class Todo {
-    constructor(title, description, dueDate, priority, notes = '', checklist = []) {
+export class Todo {
+    constructor (title,
+        description,
+        dueDate,
+        priority,
+        completed = false
+    ) {
         this.title = title;
         this.description = description;
         this.dueDate = dueDate;
         this.priority = priority;
-        this.notes = notes;
-        this.checklist = checklist;
-        this.completed = false;
+        this.completed = completed;
+    }
+
+    taskCheck() {
+        this.completed = !this.completed;
     }
 }
-
